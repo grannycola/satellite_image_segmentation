@@ -1,4 +1,3 @@
-
 import xml.etree.ElementTree as et
 import glob
 import os
@@ -50,11 +49,10 @@ def parseLabeledObjects(root, maskDir):
         polygon.append( parsePolygon( lmobj.find('polygon') ))
         
     #print(polygon)
-    img = Image.new("RGB", [nx, ny], (255,255,255) )
+    img = Image.new("L", [nx, ny], 0 )
     for poly,name in zip(polygon,name_list):
         print(name)
-        color = (255,100,0)
-        #color = (0,0,0)
+        color = 255
         if (len(poly) < 3): continue
 
         ImageDraw.Draw(img).polygon(poly, outline=color, fill=color)
@@ -63,7 +61,8 @@ def parseLabeledObjects(root, maskDir):
 
     #file_name = file_name.replace('.jpg','_m.jpg')
     file_name = maskDir + file_name
-    img.save(file_name.replace('.jpg','.png'), "PNG")
+    file_name = file_name.replace('_', '')
+    img.save(file_name.replace('.png','_mask.png'), "PNG")
 
 def parseFolder( localDir, maskDir):
     labels = []
@@ -107,7 +106,7 @@ def combineMaskImage(maskDir,imageDir,maskImageComb):
         new_img.save(file_name)
 
 
-maskDir = './mask/'
+maskDir = './masks/'
 xmlFolder = './xml/'
 #imageDir = './img/'
 #maskImageComb = './combined/'
