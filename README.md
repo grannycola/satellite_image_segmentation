@@ -2,7 +2,6 @@
 This is sript for dataset on Kaggle https://www.kaggle.com/datasets/yaroslavnaychuk/satelliteimagesegmentation
 # About Dataset
 
-## Edit
 Source Images Description
 The team of authors has constructed a new large-scale land-cover dataset with Gaofen-2 (GF-2) satellite images. This new dataset, which is named as Gaofen Image Dataset with 15 categories (GID-15), has superiorities over the existing land-cover dataset because of its large coverage, wide distribution, and high spatial resolution. The large-scale remote sensing semantic segmentation set contains 150 pixel-level annotated GF-2 images, which is labeled in 15 categories. Some of the images are from the paper: Land-Cover Classification with High-Resolution Remote Sensing Images Using Transferable Deep Models.
 Source Link with Dataset
