@@ -1,4 +1,4 @@
-# satellite-image-segmentation
+# satellite_image_segmentation
 This is script for dataset on Kaggle https://www.kaggle.com/datasets/yaroslavnaychuk/satelliteimagesegmentation
 # About Dataset
 
